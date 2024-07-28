@@ -1,0 +1,101 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #e7f0e9; /* Green background */
+    padding: 0.5rem 1rem; /* Padding for navbar items */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-left: 0; /* Ensure navbar starts from the leftmost edge */
+    margin-right: 0; /* Ensure navbar extends to the rightmost edge */
+    width: 100%; /* Full width of the viewport */
+    position: relative; /* Ensure positioning is relative to the page */
+}
+.bg-light {
+    background-color: #344f6b !important;
+}
+.logo{
+    position: relative;
+    border-radius: 8px; /* Rounded corners for the image */
+    width: 40px;
+    
+}
+.logo:hover{
+    transform: scale(1.1);
+
+}
+.navbar-brand {
+    color: #ffffff; /* White text color for the brand */
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* White text color for links */
+    padding: 0.5rem 1rem; /* Padding around links */
+    font-size: 1rem;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffd700; /* Gold color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+    border-radius: 4px; /* Rounded corners on hover */
+}
+
+.navbar-toggler {
+    border: 1px solid #ffffff; /* White border for the toggle button */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,...'); /* Your icon URL or SVG path */
+}
+
+/* Container for navbar alignment */
+.container-fluid {
+    max-width: 1140px; /* Container max width for alignment */
+    margin: 0 auto; /* Center container */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40; /* Dark grey background */
+    color: #ffffff; /* White text color */
+    padding: 1rem 0; /* Padding for footer content */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.875rem; /* Slightly smaller font size */
+    font-weight: 500;
+}
+
+footer p::before {
+    content: "\00a9"; /* Unicode for copyright symbol */
+}
+
+footer p::after {
+    content: "\00ae"; /* Unicode for registered symbol */
+    margin-left: 0.25rem;
+}
+
+
+/* Responsive Design Adjustments */
+@media (max-width: 767px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+    .logo[_ngcontent-ng-c1522340745] {
+        position: relative;
+        border-radius: 8px;
+        width: 40px;
+    }
+}

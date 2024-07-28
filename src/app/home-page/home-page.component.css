@@ -1,0 +1,360 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  
+}
+.stock-panel{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    margin: 0 70px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    padding: 2px;
+    font-size: medium;
+    
+}
+.live-box{
+    position: relative;
+    background-color: red;
+    display: inline;
+    font-weight: bold;
+    color: white;
+    top: 24px;
+    left: 37.6px;
+    padding: 1.3px;
+}
+.live-box:hover{
+    transform: translateX(5px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+marquee {
+    color: red;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.bn-tag {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    color:white;
+    background-color: red;
+    font-family: 'math';
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    pointer-events: fill;
+    
+}
+
+.bn-tag:hover {
+    color: black;
+    transition: color 0.3s ease;
+    pointer-events: stroke;
+}
+
+.left-column, .center-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.left-column {
+    width: 20%;
+    gap: 1px;
+    
+}
+
+.center-column {
+    width: 40%;
+    gap: 20px;
+}
+
+.right-column {
+    width: 30%;
+    gap: 20px;
+}
+
+.left-column h6:hover{
+    color: rgb(24, 194, 24);
+    transition: color 0.3s ease;
+}
+.small-box, .big-box, .large-box {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.big-box {
+    height: 200px;
+}
+
+.large-box {
+    height: 250px;
+}
+
+.large-box1, .small-box {
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    text-align: center; /* Center align text */
+    font-family: 'Arial', sans-serif; /* Use a clean font */
+}
+
+.large-box1 img, .small-box img {
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.large-box1 img:hover, .small-box img:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.large-box1 p {
+    font-size: 16px; /* Text size for product description */
+    color: #333; /* Darker text color */
+    margin-bottom: 10px; /* Space below the paragraph */
+}
+
+.large-box1 h3 {
+    font-size: 24px; /* Larger text size for price */
+    color: #e74c3c; /* Red color for the discount price */
+    margin-bottom: 5px; /* Space below the price */
+}
+
+.large-box1 h6 {
+    font-size: 14px; /* Smaller text size for additional info */
+    color: #777; /* Lighter text color */
+    margin-bottom: 10px; /* Space below each h6 */
+}
+
+/* .small-box{
+    background-image: url('../../assets/images/bg-main.jpg');
+    background-position: center;
+    background-size: cover;
+} */
+.large-box1 marquee {
+    color: #8d7575;
+    font-weight: bold;
+}
+
+.large-box1 a {
+    color: #007bff; /* Blue color for the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+}
+
+.large-box1 a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.addTag {
+    position: relative;
+    text-align: center; 
+    background-color: #f8f6f6;
+    font-family: 'Arial', sans-serif;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.addTag:hover {
+    color: #e74c3c; /* Red color for hover */
+    transition: color 0.3s ease;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .left-column, .center-column, .right-column {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .bn-tag {
+        font-size: 16px;
+    }
+
+    .small-box, .big-box, .large-box, .large-box1 {
+        padding: 10px;
+    }
+
+    .large-box1 p, .large-box1 h3, .large-box1 h6 {
+        font-size: 14px;
+    }
+
+    .large-box1 img, .small-box img {
+        margin-bottom: 10px;
+    }
+}
+.weather-panel {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    /* background-image: url('../../assets/images/bg-weather.jpg'); */
+    background-size: cover; /* Ensures the image covers the entire block */
+  background-position: center;
+    max-width: 800px;
+    width: -webkit-fill-available;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: #333;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .weather-info input {
+    margin: 0;
+    font-family: monospace;
+    font-size: inherit;
+    line-height: inherit;
+    border: outset;
+    padding: revert-layer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weather-info button {
+    margin: 0;
+    font-family: monospace;
+    font-size: inherit;
+    line-height: inherit;
+    border: outset;
+    padding: revert-layer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .weather-info h2{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-block: 15px;
+  }
+  .weather-info h2:hover{
+    transform: translateY(5px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  .temp {
+    font-size: 40px;
+    font-family: -webkit-body;
+    text-shadow: 20px 17px 30px rgb(0 0 0 / 20%);
+
+  }
+  .temp:hover{
+    color:#ff0000;
+    transform: color 0.3s ease;
+  }
+  .topweather{
+    line-height: 10px;
+  }
+  .des{
+    font-family: cursive;
+    text-transform: uppercase;
+  }
+  .des:hover{
+    color:#ff0000;
+    transform: color 0.3s ease;
+   
+  }
+  
+  .search-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  .weather-content {
+    line-height: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-block: 10px;
+    font-family: -webkit-body;
+    font-weight: bold;
+    font-size: larger;
+  }
+  .weather-content:hover{
+    transform: translateY(5px); 
+  }
+  .weather-content p:hover{
+    color: #f4ff00;
+    transition: color 0.3s ease;
+  }
+  
+
+.air-quality {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-image: url('../../assets/images/bg-air.avif');
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .air-quality input[type="text"] {
+    width: calc(100% - 110px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+  
+  .air-quality button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 4px 6px 14px 0px #060606;
+  }
+  
+  .air-quality button:hover {
+    background-color: #45a049;
+  }
+  
+  .air-quality h3:hover{
+    color: #0400ff;
+    
+    transition: color 0.3s ease;
+  }
+  .air-quality-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  .air-quality-table .row {
+    display: flex;
+    padding: 10px 0;
+    font-family: -webkit-body;
+    font-size: large;
+    border-bottom: 1px solid #4f648e;
+
+  }
+  
+  .air-quality-table .cell {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .air-quality-table .cell strong {
+    color: #333;
+  }
+  
+  

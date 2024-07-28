@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <h5><marquee>For More Updates Subscribe our Channel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stay tuned for the latest news!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don't miss out on any updates!</marquee></h5>
+    <div class="live-box">LIVE</div>
+    <h6><Marquee class="stock-panel" >
+        <ng-container *ngFor="let hd of livemarket; let i = index">
+            {{hd.exchangeType}} : {{hd.name}} ₹{{hd.livePrice}} 
+            <span *ngIf="hd.netChange < 0" style="color:rgb(255, 0, 0); font-weight: bold;"> {{hd.netChange}} ({{hd.percentChange}}%)</span>
+            <span *ngIf="hd.netChange > 0" style="color:#00ff00;font-weight: bold;"> +{{hd.netChange}} ({{hd.percentChange}}%)</span>
+            <span *ngIf="i < livemarket.length - 1"> | </span>
+        </ng-container>
+    </Marquee></h6>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Infinity</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <h4 class="bn-tag">BREAKING NEWS..!</h4> <br>
+            <div *ngFor="let nd of breakingnews; let i = index "  class="ng-container">
+                <div *ngIf="nd.urlToImage && i < 30" class="small-box">
+                   <img [src]="nd.urlToImage" width="100%">
+                   <h6>{{nd.title}}</h6>
+                </div>
+            </div>
+        </div>
+            
+   
+        <div class="center-column">
+            <!-- <div  class="mainweather"> -->
+            <div class="weather-panel" style="background-image: url(&quot;https://mdbgo.io/ascensus/mdb-advanced/img/clear.gif&quot;)">
+            
+                <div class="weather-info">
+                    
+                        <div>
+                            <input [(ngModel)]="cityName" placeholder="Enter city name" (keyup.enter)="searchCity()" />
+                            <button (click)="searchCity()">Search</button>
+                          </div>
+                          
+                            <h2>Weather in {{ weatherNews.name }}</h2><br>
+                            <div class="topweather">
+                  <p class="temp"><strong> {{ weatherNews.main.temp }} °C</strong></p>
+                  <p class="des"> {{ weatherNews.weather[0].description }}</p>
+                </div>
+                <br>
+                  <!-- <p><strong>Feels Like:</strong> {{ weatherNews.main.feels_like }} °C</p>
+                  <p><strong>Min Temperature:</strong> {{ weatherNews.main.temp_min }} °C</p>
+                  <p><strong>Max Temperature:</strong> {{ weatherNews.main.temp_max }} °C</p> -->
+                  <div class="weather-content">
+                  <p><strong>Pressure:</strong> {{ weatherNews.main.pressure }} hPa</p>
+                  <p><strong>Humidity:</strong> {{ weatherNews.main.humidity }}%</p>
+                  <p><strong>Wind Speed:</strong> {{ weatherNews.wind.speed }} m/s</p>
+                  <p><strong>Wind Direction:</strong> {{ weatherNews.wind.deg }}°</p>
+                  <p><strong>Visibility:</strong> {{ weatherNews.visibility }} m</p>
+                  <p><strong>Cloudiness:</strong> {{ weatherNews.clouds.all }}%</p>
+                  <p><strong>Sunrise:</strong> {{ weatherNews.sys.sunrise | date:'shortTime' }}</p>
+                  <p><strong>Sunset:</strong> {{ weatherNews.sys.sunset | date:'shortTime' }}</p>
+                </div>
+                </div>
+                  <!-- <p><strong>Sunrise:</strong> {{ weatherNews.sys.sunrise | date:'shortTime' }}</p>
+                  <p><strong>Sunset:</strong> {{ weatherNews.sys.sunset | date:'shortTime' }}</p> -->
+                </div>
+             <!-- </div> -->
+          
+                <!-- <div class="riddle-box" *ngFor="let rd of riddles; let i=index">
+                       <span style="font-weight: bold;"> {{rd.title}}</span>
+                       <p>{{rd.question}}</p>
+                       <button (click)="showanswer(i)"> Show Answer</button>
+                       <p *ngIf="show[i]" >{{rd.answer}}</p>
+                </div> -->
+               <!-- <div class="currencyForm">
+                
+                <form [formGroup]="currencyForm" (ngSubmit)="onSubmit()">
+                    <h3>CONVERT CURRENCY</h3>
+                    <div class="form-group">
+                      <label for="haveIt">Have:</label>
+                      <input type="text" id="haveIt" placeholder="3-character currency code" formControlName="haveIt">
+                    </div>
+                    <div class="form-group">
+                      <label for="wantIt">Want:</label>
+                      <input type="text" id="wantIt" placeholder="3-character currency code" formControlName="wantIt">
+                    </div>
+                    <div class="form-group">
+                      <label for="amount">Amount:</label>
+                      <input type="number" id="amount" placeholder="Enter amount" formControlName="amount">
+                    </div>
+                    <button type="submit">Convert</button><br><br>
+
+                    <p> <span style="font-weight: bold; color: #00ffc2;">AMOUNT =</span> {{newCurrency}}</p>
+                  </form>
+                  <div *ngIf="errorMessage" class="error-message">
+                    {{ errorMessage }}
+                  </div>
+                </div> -->
+                <div class="air-quality">
+                    <h3 style="font-weight: bold; text-align: center;"> AIR QUALITY</h3>
+                    <input type="text" [(ngModel)]="city" placeholder="Enter city name" (keyup.enter)="getAir()">
+                    <button (click)="getAir()">Get Air Quality</button>
+                    <div class="air-quality-table">
+                      <div class="row">
+                        <div class="cell"><strong>CO:</strong></div>
+                        <div class="cell"><strong>aqi</strong> <br> {{airQualityCO.aqi}}</div>
+                        <div class="cell"><strong>concentration </strong><br> {{airQualityCO.concentration}}</div>
+                      </div>
+                      <div class="row">
+                        <div class="cell"><strong>NO2:</strong></div>
+                        <div class="cell"><strong>aqi</strong> <br> {{airQualityNO2.aqi}}</div>
+                        <div class="cell"><strong>concentration</strong> <br> {{airQualityNO2.concentration}}</div>
+                      </div>
+                      <div class="row">
+                        <div class="cell"><strong>O3:</strong></div>
+                        <div class="cell"><strong>aqi</strong> <br> {{airQualityO3.aqi}}</div>
+                        <div class="cell"><strong>concentration</strong> <br> {{airQualityO3.concentration}}</div>
+                      </div>
+                      <div class="row">
+                        <div class="cell"><strong>SO2:</strong></div>
+                        <div class="cell"><strong>aqi</strong> <br> {{airQualitySO2.aqi}}</div>
+                        <div class="cell"><strong>concentration</strong> <br> {{airQualitySO2.concentration}}</div>
+                      </div>
+                      <div class="row">
+                        <div class="cell"><strong>Overall Air Quality:</strong></div>
+                        <div class="cell" colspan="2">{{airQualityOA}}</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+       
+        <div class="right-column">
+            <h3 class="addTag" > Advertisements</h3>
+            <div class="large-box1">
+                <marquee>FREE DELIVERY..!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 YEAR WARRANTY..!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEVICE SERVICE AVAILABLE..!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TOP BRAND..!</marquee>
+               <img src="../assets/images/add1.jpg" width="100%" >
+               <p>Samsung Galaxy Book4 Pro | Intel Evo Core Ultra 5 125H | Built-in AI | 16" (40.64cm) Touchscreen Dynamic AMOLED 2X 120Hz| 500 Nits (16GB/512GB SSD/Intel Arc/Win11/MSO'21/Gray/1.56kg)</p>
+               <h3>-33% ₹1,09,990</h3>
+               <h6 style="text-decoration: line-through;">₹1,63,289</h6>
+               <h6>Inclusive of all taxes</h6> 
+               <h6><a target="_blank" href="https://www.amazon.in/gp/aw/d/B0CVKZSBT3/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=d01e5080bcc2f78198927f0a75d1eda4&hsa_cr_id=0&qid=1721824437&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&ref_=sbx_be_s_sparkle_lsi4d_asin_0_img&pd_rd_w=abZc7&content-id=amzn1.sym.df9fe057-524b-4172-ac34-9a1b3c4e647d%3Aamzn1.sym.df9fe057-524b-4172-ac34-9a1b3c4e647d&pf_rd_p=df9fe057-524b-4172-ac34-9a1b3c4e647d&pf_rd_r=Z5JZVN020EW0X6AADQMN&pd_rd_wg=kkr6y&pd_rd_r=bc4ee96c-c369-4892-bfb6-112ea0c1cd2a">Click here</a> to know more</h6>
+            </div>
+            <!-- <div class="large-box1">
+                <img src="../assets/images/add2.webp" width="100%" >
+                <p>Bewakoof®
+                    Men's Blue Prototype Graphic Printed Oversized T-shirt</p>
+                <h3>₹599</h3>
+                <h6 style="text-decoration: line-through;">₹1.299</h6>
+                <h6>TriBe members get an extra discount of ₹50 and FREE shipping.</h6> 
+                <h6><a target="_blank" href="https://www.bewakoof.com/p/prototype-1-0-oversized-fit-t-shirt">Click here</a> to know more</h6>
+             </div> -->
+             <div class="large-box1">
+                <marquee>Free return for all qualifying orders within 14 days of your order delivery date.</marquee>
+                <img src="../assets/images/add3.avif" width="100%" >
+                <p>Liberate NITRO™ 2 Men's Running Shoes</p>
+                <h3>₹8,799</h3>
+                <h6 style="text-decoration: line-through;">₹10,999</h6>
+                <h6 >The Liberate NITRO™ 2 is a fast option for your short distance runs and races. It's lightweight, flexible, and leaves you free to push the limits. A simplified mono-mesh upper is teamed with a firmer NITRO foam that's more responsive than v1, resulting in a shoe that's built for a tempo run and distances up to a half marathon.</h6> 
+                <h6><a target="_blank" href="https://in.puma.com/in/en/pd/liberate-nitro%E2%84%A2-2-mens-running-shoes/377315?size=0220&swatch=01">Click here</a> to know more</h6>
+             </div>
+        </div>
+    </div>
+</body>
+</html>
