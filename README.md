@@ -26,6 +26,23 @@ The website includes APIs from third-party databases that can only be accessed o
 - **Homepage:** Click on the website name (News Infinity) in the top header to land on the homepage.
 - **Footer:** The footer contains the 'App Info' section with developer information.
 
+## Screenshots
+
+- **Homepage:**
+  ![Homepage](src/assets/images/Home_Page_ss.jpg)
+
+- **Advertisement:**
+  ![Advertisement](src/assets/images/Add_ss.jpg)
+
+- **Logo:**
+  ![Logo](src/assets/images/logo_ss.jpg)
+
+- **Air Quality Panel:**
+  ![Air Quality Panel](src/assets/images/Air_Quality_ss.jpg)
+
+- **Business News Page:**
+  ![Business News Page](src/assets/images/Business_news_ss.jpg)
+
 ## Developer Information
 
 - **Name:** Divyanshu Lila
@@ -41,5 +58,25 @@ The website includes APIs from third-party databases that can only be accessed o
 - **Build:** Run `ng build` to build the project. Artifacts will be stored in the `dist/` directory.
 - **Unit Tests:** Run `ng test` to execute unit tests via [Karma](https://karma-runner.github.io).
 - **End-to-End Tests:** Run `ng e2e` for end-to-end tests (requires an additional package).
+
+## Contributing
+
+Feel free to contribute by submitting issues or pull requests. Please follow the guidelines in `CONTRIBUTING.md`.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Known Issues
+
+- List any known issues or common troubleshooting steps.
+
+## Changelog
+
+- [Version 1.0.0] Initial release.
+
+## Future Plans
+
+- Add more features or improvements here.
 
 For more help with Angular CLI, use `ng help` or visit the [Angular CLI Overview and Command Reference](https://angular.io/cli).
