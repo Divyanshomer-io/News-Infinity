@@ -27,7 +27,7 @@ The website includes APIs from third-party databases that can only be accessed o
 - **Footer:** The footer contains the 'App Info' section with developer information.
  
 ## Video Demonstration of News Infinity
-https://drive.google.com/file/d/1KhuxTchkhaHTrGvUE0xYz3x_leEOszPH/view?usp=sharing
+You can view or download the [Google Drive File](https://drive.google.com/file/d/1KhuxTchkhaHTrGvUE0xYz3x_leEOszPH/view?usp=sharing) using this link.
 
 ## Screenshots
 
