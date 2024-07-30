@@ -8,16 +8,17 @@ The website includes APIs from third-party databases that can only be accessed o
 
 1. **Download and Extract:**
    - Download the master branch ZIP file.
+   - **GitHub Repository:** You can access the project repository on [GitHub](https://github.com/Divyanshomer-io/News-Infinity.git).
    - Extract it to your desired location.
 
-2. **Open the Project:**
+3. **Open the Project:**
    - Open the extracted folder in Visual Studio Code. The project directory should look like `C:\Users\users\Downloads\News-Infinity-master\News-Infinity-master`.
 
-3. **Install Dependencies:**
+4. **Install Dependencies:**
    - Open a terminal in Visual Studio Code.
    - Run the command: `npm install` to install the required Node.js modules.
 
-4. **Serve the Project:**
+5. **Serve the Project:**
    - Run the command: `ng serve` to start the development server.
    - Navigate to `http://localhost:4200/` in your browser. The application will automatically reload if you change any of the source files.
 
